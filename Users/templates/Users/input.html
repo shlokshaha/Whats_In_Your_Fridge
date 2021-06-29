@@ -1,0 +1,55 @@
+{% extends 'Main/base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- Header and Navbar -->
+    <header>
+        <div class="my-container">
+            <div id="branding">
+                <a href="{% url 'Main-home' %}"><h1>What's In Your Fridge...</h1></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'Main-instructions' %}">Instructions</a></li>
+                    <li class="current"><a href="{% url 'input' %}">Input Page</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <form action="" method="POST" class="formClass">
+            {% csrf_token %}
+            <div class="innerForm">
+                <h2>Input Form</h2><br>
+                <span class="block">Are you a Pure Vegetarian?&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <input type="radio" name="isVegetarian" value="yes" id="yesOptn" required>
+                <label for="yesOptn">Yes</label>&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="isVegetarian" value="no" id="noOptn" required>
+                <label for="noOptn">No</label>
+
+                <br><br>
+
+                <label for="select" class="block">Select Your Meal Preference:&nbsp;</label>
+                <select name="mealPreference" id="select" required>
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                </select>
+
+                <br><br>
+
+                <input id="submitBtn" type="submit" value="Submit">
+                <br>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="fixedFooter">
+        SE11 PBL Group ID 5, Copyright &copy; 2021
+    </footer>
+
+{% endblock %}

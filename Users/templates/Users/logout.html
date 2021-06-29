@@ -1,0 +1,32 @@
+{% extends 'Main/base.html' %}
+{% load static %}
+{% block content %}
+
+    <header>
+        <div class="my-container">
+            <div id="branding">
+                <a href="{% url 'Main-home' %}"><h1>What's In Your Fridge...</h1></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container mt-4 mb-4">
+            <h2>You have been Logged Out...</h2>
+            <div class="border-top pt-3">
+                <small class="text-muted">
+                    <a href="{% url 'login' %}">Login Again</a>
+                </small>
+            </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="fixedFooter">
+        SE11 PBL Group ID 5, Copyright &copy; 2021
+    </footer>
+
+{% endblock %}

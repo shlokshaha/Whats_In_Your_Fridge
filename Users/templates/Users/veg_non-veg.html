@@ -1,0 +1,674 @@
+{% extends 'Main/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Header and Navbar -->
+    <header>
+        <div class="my-container">
+            <div id="branding">
+                <a href="{% url 'Main-home' %}"><h1>What's In Your Fridge...</h1></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'Main-instructions' %}">Instructions</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <form action="">
+        <div class="container">
+            <h5 class="my-2"><b>Please Tick the Veg/Non-Veg Ingredients you have and Submit: </b></h5>
+
+            <h2 class="text-center mt-4">Non-Veg Ingredients</h2>
+
+            <label class="list-group-item" for="Boneless Meat">
+                <input type="checkbox" name="nonVegIngredients" value="Boneless Meat" id="Boneless Meat" />
+                <span>Boneless Meat</span>
+            </label>
+            <label class="list-group-item" for="Chicken">
+                <input type="checkbox" name="nonVegIngredients" value="Chicken" id="Chicken" />
+                <span>Chicken</span>
+            </label>
+            <label class="list-group-item" for="Chicken Breasts">
+                <input type="checkbox" name="nonVegIngredients" value="Chicken Breasts" id="Chicken Breasts" />
+                <span>Chicken Breasts</span>
+            </label>
+            <label class="list-group-item" for="Eggs">
+                <input type="checkbox" name="nonVegIngredients" value="Eggs" id="Eggs" />
+                <span>Eggs</span>
+            </label>
+            <label class="list-group-item" for="Fish">
+                <input type="checkbox" name="nonVegIngredients" value="Fish" id="Fish" />
+                <span>Fish</span>
+            </label>
+            <label class="list-group-item" for="Minced Meat">
+                <input type="checkbox" name="nonVegIngredients" value="Minced Meat" id="Minced Meat" />
+                <span>Minced Meat</span>
+            </label>
+            <label class="list-group-item" for="Mutton">
+                <input type="checkbox" name="nonVegIngredients" value="Mutton" id="Mutton" />
+                <span>Mutton</span>
+            </label>
+            <label class="list-group-item" for="Prawns">
+                <input type="checkbox" name="nonVegIngredients" value="Prawns" id="Prawns" />
+                <span>Prawns</span>
+            </label>
+
+            <h2 class="text-center mt-4">Veg Ingredients</h2>
+
+            <!-- A -->
+            <h3 class="list-group-item-heading">A</h3>
+            <label class="list-group-item" for="Ajwain">
+                <input type="checkbox" name="nonVegIngredients" value="Ajwain(Carom Seeds)" id="Ajwain" />
+                <span>Ajwain (Carom Seeds)</span>
+            </label>
+            <label class="list-group-item" for="Almond">
+                <input type="checkbox" name="nonVegIngredients" value="Almond(Badam)" id="Almond" />
+                <span>Almond</span>
+            </label>
+            <label class="list-group-item" for="Amchur">
+                <input type="checkbox" name="nonVegIngredients" value="Amchur" id="Amchur" />
+                <span>Amchur</span>
+            </label>
+            <label class="list-group-item" for="Anardana">
+                <input type="checkbox" name="nonVegIngredients" value="Anardana" id="Anardana" />
+                <span>Anardana</span>
+            </label>
+            <label class="list-group-item" for="Anise">
+                <input type="checkbox" name="nonVegIngredients" value="Anise(Saunf)" id="Anise" />
+                <span>Anise (Saunf)</span>
+            </label>
+            <label class="list-group-item" for="Arhar">
+                <input type="checkbox" name="nonVegIngredients" value="Arhar Dal" id="Arhar" />
+                <span>Arhar Dal</span>
+            </label>
+            <label class="list-group-item" for="Asafoetida">
+                <input type="checkbox" name="nonVegIngredients" value="Asafoetida" id="Asafoetida" />
+                <span>Asafoetida (Hing)</span>
+            </label>
+
+            <!-- B -->
+            <h3 class="list-group-item-heading mt-3">B</h3>
+            <label class="list-group-item" for="Badi">
+                <input type="checkbox" name="nonVegIngredients" value="Badi Leaves" id="Badi" />
+                <span>Badi Leaves</span>
+            </label>
+            <label class="list-group-item" for="Bajra">
+                <input type="checkbox" name="nonVegIngredients" value="Bajra" id="Bajra" />
+                <span>Bajra</span>
+            </label>
+            <label class="list-group-item" for="Banana">
+                <input type="checkbox" name="nonVegIngredients" value="Banana" id="Banana" />
+                <span>Banana</span>
+            </label>
+            <label class="list-group-item" for="Basmati">
+                <input type="checkbox" name="nonVegIngredients" value="Basmati Rice" id="Basmati" />
+                <span>Basmati Rice</span>
+            </label>
+            <label class="list-group-item" for="Bay">
+                <input type="checkbox" name="nonVegIngredients" value="Bay Leaves" id="Bay" />
+                <span>Bay Leaves</span>
+            </label>
+            <label class="list-group-item" for="Beans">
+                <input type="checkbox" name="nonVegIngredients" value="Beans" id="Beans" />
+                <span>Beans</span>
+            </label>
+            <label class="list-group-item" for="Basen">
+                <input type="checkbox" name="nonVegIngredients" value="Basen" id="Basen" />
+                <span>Basen</span>
+            </label>
+            <label class="list-group-item" for="Karela">
+                <input type="checkbox" name="nonVegIngredients" value="Karela" id="Karela" />
+                <span>Bittergaurd (Karela)</span>
+            </label>
+            <label class="list-group-item" for="Bread">
+                <input type="checkbox" name="nonVegIngredients" value="Bread" id="Bread" />
+                <span>Bread</span>
+            </label>
+            <label class="list-group-item" for="Crumbs">
+                <input type="checkbox" name="nonVegIngredients" value="Bread Crumbs" id="Crumbs" />
+                <span>Bread Crumbs</span>
+            </label>
+            <label class="list-group-item" for="Brinjal">
+                <input type="checkbox" name="nonVegIngredients" value="Brinjal(Baingan)" id="Brinjal" />
+                <span>Brinjal (Baingan)</span>
+            </label>
+            <label class="list-group-item" for="Broccoli">
+                <input type="checkbox" name="nonVegIngredients" value="Broccoli" id="Broccoli" />
+                <span>Broccoli</span>
+            </label>
+            <label class="list-group-item" for="Butter">
+                <input type="checkbox" name="nonVegIngredients" value="Butter" id="Butter" />
+                <span>Butter</span>
+            </label>
+
+            <!-- C -->
+            <h3 class="list-group-item-heading mt-3">C</h3>
+            <label class="list-group-item" for="Cabbage">
+                <input type="checkbox" name="nonVegIngredients" value="Cabbage(Gobi)" id="Cabbage" />
+                <span>Cabbage(Gobi)</span>
+            </label>
+            <label class="list-group-item" for="Capsicum">
+                <input type="checkbox" name="nonVegIngredients" value="Capsicum" id="Capsicum" />
+                <span>Capsicum</span>
+            </label>
+            <label class="list-group-item" for="Elaichi">
+                <input type="checkbox" name="nonVegIngredients" value="Cardamom(Elaichi)" id="Elaichi" />
+                <span>Cardamom (Elaichi)</span>
+            </label>
+            <label class="list-group-item" for="Carrot">
+                <input type="checkbox" name="nonVegIngredients" value="Carrot(Gajar)" id="Carrot" />
+                <span>Carrot (Gajar)</span>
+            </label>
+            <label class="list-group-item" for="Cashew">
+                <input type="checkbox" name="nonVegIngredients" value="Cashew Nuts" id="Cashew" />
+                <span>Cashew Nuts</span>
+            </label>
+            <label class="list-group-item" for="Cashews">
+                <input type="checkbox" name="nonVegIngredients" value="Cashews" id="Cashews" />
+                <span>Cashews</span>
+            </label>
+            <label class="list-group-item" for="Cauliflower">
+                <input type="checkbox" name="nonVegIngredients" value="Cauliflower" id="Cauliflower" />
+                <span>Cauliflower</span>
+            </label>
+            <label class="list-group-item" for="Celery">
+                <input type="checkbox" name="nonVegIngredients" value="Celery" id="Celery" />
+                <span>Celery (Ajamoda)</span>
+            </label>
+            <label class="list-group-item" for="Chaat">
+                <input type="checkbox" name="nonVegIngredients" value="Chaat Masala Powder" id="Chaat" />
+                <span>Chaat Masala Powder</span>
+            </label>
+            <label class="list-group-item" for="Chana">
+                <input type="checkbox" name="nonVegIngredients" value="Chana" id="Chana" />
+                <span>Chana</span>
+            </label>
+            <label class="list-group-item" for="Chana Dal">
+                <input type="checkbox" name="nonVegIngredients" value="Chana Dal" id="Chana Dal" />
+                <span>Chana Dal</span>
+            </label>
+            <label class="list-group-item" for="Cheese">
+                <input type="checkbox" name="nonVegIngredients" value="Cheese" id="Cheese" />
+                <span>Cheese</span>
+            </label>
+            <label class="list-group-item" for="Chili">
+                <input type="checkbox" name="nonVegIngredients" value="Chili" id="Chili" />
+                <span>Chili (Mirch)</span>
+            </label>
+            <label class="list-group-item" for="Chutney">
+                <input type="checkbox" name="nonVegIngredients" value="Chutney" id="Chutney" />
+                <span>Chutney</span>
+            </label>
+            <label class="list-group-item" for="Cinnamon Powder">
+                <input type="checkbox" name="nonVegIngredients" value="Cinnamon Powder" id="Cinnamon Powder" />
+                <span>Cinnamon Powder</span>
+            </label>
+            <label class="list-group-item" for="Cloves">
+                <input type="checkbox" name="nonVegIngredients" value="Cloves" id="Cloves" />
+                <span>Cloves</span>
+            </label>
+            <label class="list-group-item" for="Coconut">
+                <input type="checkbox" name="nonVegIngredients" value="Coconut" id="Coconut" />
+                <span>Coconut</span>
+            </label>
+            <label class="list-group-item" for="Coconut Oil">
+                <input type="checkbox" name="nonVegIngredients" value="Coconut Oil" id="Coconut Oil" />
+                <span>Coconut Oil</span>
+            </label>
+            <label class="list-group-item" for="Coriander(Dhania) Leaves">
+                <input type="checkbox" name="nonVegIngredients" value="Coriander(Dhania) Leaves"
+                    id="Coriander(Dhania) Leaves" />
+                <span>Coriander(Dhania) Leaves</span>
+            </label>
+            <label class="list-group-item" for="Coriander(Dhania) Powder">
+                <input type="checkbox" name="nonVegIngredients" value="Coriander(Dhania) Powder"
+                    id="Coriander(Dhania) Powder" />
+                <span>Coriander(Dhania) Powder</span>
+            </label>
+            <label class="list-group-item" for="Corn">
+                <input type="checkbox" name="nonVegIngredients" value="Corn" id="Corn" />
+                <span>Corn</span>
+            </label>
+            <label class="list-group-item" for="Cottage">
+                <input type="checkbox" name="nonVegIngredients" value="Cottage Cheese" id="Cottage" />
+                <span>Cottage Cheese</span>
+            </label>
+            <label class="list-group-item" for="Cream">
+                <input type="checkbox" name="nonVegIngredients" value="Cream" id="Cream" />
+                <span>Cream</span>
+            </label>
+            <label class="list-group-item" for="Cucumber">
+                <input type="checkbox" name="nonVegIngredients" value="Cucumber" id="Cucumber" />
+                <span>Cucumber</span>
+            </label>
+            <label class="list-group-item" for="Cumin(Jeera) Powder">
+                <input type="checkbox" name="nonVegIngredients" value="Cumin(Jeera) Powder" id="Cumin(Jeera) Powder" />
+                <span>Cumin(Jeera) Powder</span>
+            </label>
+            <label class="list-group-item" for="Cumin(Jeera) Seeds">
+                <input type="checkbox" name="nonVegIngredients" value="Cumin(Jeera) Seeds" id="Cumin(Jeera) Seeds" />
+                <span>Cumin(Jeera) Seeds</span>
+            </label>
+            <label class="list-group-item" for="Curd(Dahi)">
+                <input type="checkbox" name="nonVegIngredients" value="Curd(Dahi)" id="Curd(Dahi)" />
+                <span>Curd (Dahi)</span>
+            </label>
+            <label class="list-group-item" for="Curry Leaves">
+                <input type="checkbox" name="nonVegIngredients" value="Curry Leaves" id="Curry Leaves" />
+                <span>Curry Leaves</span>
+            </label>
+
+            <!-- D -->
+            <h3 class="list-group-item-heading mt-3">D</h3>
+            <label class="list-group-item" for="Dalchini">
+                <input type="checkbox" name="nonVegIngredients" value="Dalchini" id="Dalchini" />
+                <span>Dalchini</span>
+            </label>
+            <label class="list-group-item" for="Dill Leaves">
+                <input type="checkbox" name="nonVegIngredients" value="Dill Leaves" id="Dill Leaves" />
+                <span>Dill Leaves</span>
+            </label>
+            <label class="list-group-item" for="Drumstick">
+                <input type="checkbox" name="nonVegIngredients" value="Drumstick" id="Drumstick" />
+                <span>Drumstick</span>
+            </label>
+
+            <!-- E -->
+            <h3 class="list-group-item-heading mt-3">E</h3>
+            <label class="list-group-item" for="Eggplant">
+                <input type="checkbox" name="nonVegIngredients" value="Eggplant" id="Eggplant" />
+                <span>Eggplant (Baingan)</span>
+            </label>
+
+            <!-- F -->
+            <h3 class="list-group-item-heading mt-3">F</h3>
+            <label class="list-group-item" for="Fingerokra">
+                <input type="checkbox" name="nonVegIngredients" value="Fingerokra" id="Fingerokra" />
+                <span>Fingerokra (Pushpak)</span>
+            </label>
+            <label class="list-group-item" for="Flour">
+                <input type="checkbox" name="nonVegIngredients" value="Flour" id="Flour" />
+                <span>Flour</span>
+            </label>
+            <label class="list-group-item" for="Fruit">
+                <input type="checkbox" name="nonVegIngredients" value="Fruit" id="Fruit" />
+                <span>Fruits</span>
+            </label>
+
+            <!-- G -->
+            <h3 class="list-group-item-heading mt-3">G</h3>
+            <label class="list-group-item" for="Garam Masala Powder">
+                <input type="checkbox" name="nonVegIngredients" value="Garam Masala Powder" id="Garam Masala Powder" />
+                <span>Garam Masala Powder</span>
+            </label>
+            <label class="list-group-item" for="Garlic">
+                <input type="checkbox" name="nonVegIngredients" value="Garlic" id="Garlic" />
+                <span>Garlic</span>
+            </label>
+            <label class="list-group-item" for="Ghee">
+                <input type="checkbox" name="nonVegIngredients" value="Ghee" id="Ghee" />
+                <span>Ghee</span>
+            </label>
+            <label class="list-group-item" for="Ginger Garlic Paste">
+                <input type="checkbox" name="nonVegIngredients" value="Ginger Garlic Paste" id="Ginger Garlic Paste" />
+                <span>Ginger Garlic Paste</span>
+            </label>
+            <label class="list-group-item" for="Gourd">
+                <input type="checkbox" name="nonVegIngredients" value="Gourd" id="Gourd" />
+                <span>Gourd</span>
+            </label>
+            <label class="list-group-item" for="Grams">
+                <input type="checkbox" name="nonVegIngredients" value="Grams" id="Grams" />
+                <span>Grams</span>
+            </label>
+            <label class="list-group-item" for="Green Peas">
+                <input type="checkbox" name="nonVegIngredients" value="Green Peas" id="Green Peas" />
+                <span>Green Peas</span>
+            </label>
+
+            <!-- H -->
+            <h3 class="list-group-item-heading mt-3">H</h3>
+            <label class="list-group-item" for="Honey">
+                <input type="checkbox" name="nonVegIngredients" value="Honey" id="Honey" />
+                <span>Honey</span>
+            </label>
+            <label class="list-group-item" for="Hung Curd">
+                <input type="checkbox" name="nonVegIngredients" value="Hung Curd" id="Hung Curd" />
+                <span>Hung Curd</span>
+            </label>
+
+            <!-- J -->
+            <h3 class="list-group-item-heading mt-3">J</h3>
+            <label class="list-group-item" for="Jaggery">
+                <input type="checkbox" name="nonVegIngredients" value="Jaggery" id="Jaggery" />
+                <span>Jaggery</span>
+            </label>
+            <label class="list-group-item" for="Javitri">
+                <input type="checkbox" name="nonVegIngredients" value="Javitri(Nutmeg)" id="Javitri" />
+                <span>Javitri(Nutmeg)</span>
+            </label>
+            <label class="list-group-item" for="Jowar">
+                <input type="checkbox" name="nonVegIngredients" value="Jowar" id="Jowar" />
+                <span>Jowar</span>
+            </label>
+
+            <!-- K -->
+            <h3 class="list-group-item-heading mt-3">J</h3>
+            <label class="list-group-item" for="Kabuli Chana">
+                <input type="checkbox" name="nonVegIngredients" value="Kabuli Chana" id="Kabuli Chana" />
+                <span>Kabuli Chana</span>
+            </label>
+            <label class="list-group-item" for="Kasuri">
+                <input type="checkbox" name="nonVegIngredients" value="Kasuri" id="Kasuri" />
+                <span>Kasuri</span>
+            </label>
+            <label class="list-group-item" for="Kopra">
+                <input type="checkbox" name="nonVegIngredients" value="Kopra" id="Kopra" />
+                <span>Kopra (Dry Coconut)</span>
+            </label>
+
+            <!-- L -->
+            <h3 class="list-group-item-heading mt-3">L</h3>
+            <label class="list-group-item" for="Bhindi">
+                <input type="checkbox" name="nonVegIngredients" value="Lady's Finger(Bhindi)" id="Bhindi" />
+                <span>Lady's Finger(Bhindi)</span>
+            </label>
+            <label class="list-group-item" for="Lauki">
+                <input type="checkbox" name="nonVegIngredients" value="Lauki" id="Lauki" />
+                <span>Lauki</span>
+            </label>
+            <label class="list-group-item" for="Laung">
+                <input type="checkbox" name="nonVegIngredients" value="Laung" id="Laung" />
+                <span>Laung</span>
+            </label>
+            <label class="list-group-item" for="Lemon">
+                <input type="checkbox" name="nonVegIngredients" value="Lemon" id="Lemon" />
+                <span>Lemon</span>
+            </label>
+            <label class="list-group-item" for="Lentil">
+                <input type="checkbox" name="nonVegIngredients" value="Lentil" id="Lentil" />
+                <span>Lentil</span>
+            </label>
+
+            <!-- M -->
+            <h3 class="list-group-item-heading mt-3">M</h3>
+            <label class="list-group-item" for="Maida">
+                <input type="checkbox" name="nonVegIngredients" value="Maida" id="Maida" />
+                <span>Maida</span>
+            </label>
+            <label class="list-group-item" for="Malabar">
+                <input type="checkbox" name="nonVegIngredients" value="Malabar" id="Malabar" />
+                <span>Malabar</span>
+            </label>
+            <label class="list-group-item" for="Mango">
+                <input type="checkbox" name="nonVegIngredients" value="Mango" id="Mango" />
+                <span>Mango</span>
+            </label>
+            <label class="list-group-item" for="Masoor">
+                <input type="checkbox" name="nonVegIngredients" value="Masoor" id="Masoor" />
+                <span>Masoor</span>
+            </label>
+            <label class="list-group-item" for="Methi(Fenugreek) Seeds">
+                <input type="checkbox" name="nonVegIngredients" value="Methi(Fenugreek) Seeds"
+                    id="Methi(Fenugreek) Seeds" />
+                <span>Methi(Fenugreek) Seeds</span>
+            </label>
+            <label class="list-group-item" for="Methi(Fenugreek) Leaves">
+                <input type="checkbox" name="nonVegIngredients" value="Methi(Fenugreek) Leaves"
+                    id="Methi(Fenugreek) Leaves" />
+                <span>Methi(Fenugreek) Leaves</span>
+            </label>
+            <label class="list-group-item" for="Milk">
+                <input type="checkbox" name="nonVegIngredients" value="Milk" id="Milk" />
+                <span>Milk</span>
+            </label>
+            </label>
+            <label class="list-group-item" for="Mint(Pudina) Leaves">
+                <input type="checkbox" name="nonVegIngredients" value="Mint(Pudina) Leaves" id="Mint(Pudina) Leaves" />
+                <span>Mint(Pudina) Leaves</span>
+            </label>
+            <label class="list-group-item" for="Moong">
+                <input type="checkbox" name="nonVegIngredients" value="Moong" id="Moong" />
+                <span>Moong</span>
+            </label>
+            <label class="list-group-item" for="Moongphali">
+                <input type="checkbox" name="nonVegIngredients" value="Moongphali" id="Moongphali" />
+                <span>Moongphali</span>
+            </label>
+            <label class="list-group-item" for="Mustard Oil">
+                <input type="checkbox" name="nonVegIngredients" value="Mustard Oil" id="Mustard Oil" />
+                <span>Mustard Oil</span>
+            </label>
+            <label class="list-group-item" for="Mustard">
+                <input type="checkbox" name="nonVegIngredients" value="Mustard" id="Mustard" />
+                <span>Mustard</span>
+            </label>
+            <label class="list-group-item" for="Muttaikose">
+                <input type="checkbox" name="nonVegIngredients" value="Muttaikose" id="Muttaikose" />
+                <span>Muttaikose (Patta Gobi)</span>
+            </label>
+
+            <!-- N -->
+            <h3 class="list-group-item-heading mt-3">N</h3>
+            <label class="list-group-item" for="Nigella">
+                <input type="checkbox" name="nonVegIngredients" value="Nigella" id="Nigella" />
+                <span>Nigella Seeds</span>
+            </label>
+            <label class="list-group-item" for="Nutmeg">
+                <input type="checkbox" name="nonVegIngredients" value="Nutmeg" id="Nutmeg" />
+                <span>Nutmeg</span>
+            </label>
+
+            <!-- O -->
+            <h3 class="list-group-item-heading mt-3">O</h3>
+            <label class="list-group-item" for="Oatmeal">
+                <input type="checkbox" name="nonVegIngredients" value="Oatmeal" id="Oatmeal" />
+                <span>Oatmeal</span>
+            </label>
+            <label class="list-group-item" for="Olive Oil">
+                <input type="checkbox" name="nonVegIngredients" value="Olive Oil" id="Olive Oil" />
+                <span>Olive Oil</span>
+            </label>
+            <label class="list-group-item" for="Olive">
+                <input type="checkbox" name="nonVegIngredients" value="Olive" id="Olive" />
+                <span>Olive</span>
+            </label>
+            <label class="list-group-item" for="Onion">
+                <input type="checkbox" name="nonVegIngredients" value="Onion" id="Onion" />
+                <span>Onion</span>
+            </label>
+
+            <!-- P -->
+            <h3 class="list-group-item-heading mt-3">P</h3>
+            <label class="list-group-item" for="Paneer">
+                <input type="checkbox" name="nonVegIngredients" value="Paneer" id="Paneer" />
+                <span>Paneer</span>
+            </label>
+            <label class="list-group-item" for="Parangikai">
+                <input type="checkbox" name="nonVegIngredients" value="Parangikai" id="Parangikai" />
+                <span>Parangikai (White Pumpkin)</span>
+            </label>
+            <label class="list-group-item" for="Peanuts">
+                <input type="checkbox" name="nonVegIngredients" value="Peanuts" id="Peanuts" />
+                <span>Peanuts</span>
+            </label>
+            <label class="list-group-item" for="Pepper">
+                <input type="checkbox" name="nonVegIngredients" value="Pepper" id="Pepper" />
+                <span>Pepper</span>
+            </label>
+            <label class="list-group-item" for="Pods Seeds">
+                <input type="checkbox" name="nonVegIngredients" value="Pods Seeds" id="Pods Seeds" />
+                <span>Pods Seeds</span>
+            </label>
+            <label class="list-group-item" for="Poha">
+                <input type="checkbox" name="nonVegIngredients" value="Poha" id="Poha" />
+                <span>Poha</span>
+            </label>
+            <label class="list-group-item" for="Pomegranate">
+                <input type="checkbox" name="nonVegIngredients" value="Pomegranate" id="Pomegranate" />
+                <span>Pomegranate</span>
+            </label>
+            <label class="list-group-item" for="Potatoes">
+                <input type="checkbox" name="nonVegIngredients" value="Potatoes" id="Potatoes" />
+                <span>Potatoes</span>
+            </label>
+            <label class="list-group-item" for="Pumpkin">
+                <input type="checkbox" name="nonVegIngredients" value="Pumpkin" id="Pumpkin" />
+                <span>Pumpkin (Kaddu)</span>
+            </label>
+
+            <!-- R -->
+            <h3 class="list-group-item-heading mt-3">R</h3>
+            <label class="list-group-item" for="Radish">
+                <input type="checkbox" name="nonVegIngredients" value="Radish" id="Radish" />
+                <span>Radish (Muli)</span>
+            </label>
+            <label class="list-group-item" for="Ragi">
+                <input type="checkbox" name="nonVegIngredients" value="Ragi" id="Ragi" />
+                <span>Ragi</span>
+            </label>
+            <label class="list-group-item" for="Raisins">
+                <input type="checkbox" name="nonVegIngredients" value="Raisins" id="Raisins" />
+                <span>Raisins</span>
+            </label>
+            <label class="list-group-item" for="Rajma">
+                <input type="checkbox" name="nonVegIngredients" value="Rajma" id="Rajma" />
+                <span>Rajma</span>
+            </label>
+            <label class="list-group-item" for="Rava">
+                <input type="checkbox" name="nonVegIngredients" value="Rava" id="Rava" />
+                <span>Rava</span>
+            </label>
+            <label class="list-group-item" for="Red Chili">
+                <input type="checkbox" name="nonVegIngredients" value="Red Chili" id="Red Chili" />
+                <span>Red Chili</span>
+            </label>
+            <label class="list-group-item" for="Rice">
+                <input type="checkbox" name="nonVegIngredients" value="Rice" id="Rice" />
+                <span>Rice</span>
+            </label>
+            <label class="list-group-item" for="Rye">
+                <input type="checkbox" name="nonVegIngredients" value="Rye" id="Rye" />
+                <span>Rye</span>
+            </label>
+
+            <!-- S -->
+            <h3 class="list-group-item-heading mt-3">S</h3>
+            <label class="list-group-item" for="Saffron">
+                <input type="checkbox" name="nonVegIngredients" value="Saffron" id="Saffron" />
+                <span>Saffron</span>
+            </label>
+            <label class="list-group-item" for="Salt">
+                <input type="checkbox" name="nonVegIngredients" value="Salt" id="Salt" />
+                <span>Salt</span>
+            </label>
+            <label class="list-group-item" for="Sauce">
+                <input type="checkbox" name="nonVegIngredients" value="Sauce" id="Sauce" />
+                <span>Sauce</span>
+            </label>
+            <label class="list-group-item" for="Semolina(Sooji)">
+                <input type="checkbox" name="nonVegIngredients" value="Semolina(Sooji)" id="Semolina(Sooji)" />
+                <span>Semolina (Sooji)</span>
+            </label>
+            <label class="list-group-item" for="Sesame Oil">
+                <input type="checkbox" name="nonVegIngredients" value="Sesame Oil" id="Sesame Oil" />
+                <span>Sesame Oil</span>
+            </label>
+            <label class="list-group-item" for="Soda">
+                <input type="checkbox" name="nonVegIngredients" value="Soda" id="Soda" />
+                <span>Soda</span>
+            </label>
+            <label class="list-group-item" for="Soy Sauce">
+                <input type="checkbox" name="nonVegIngredients" value="Soy Sauce" id="Soy Sauce" />
+                <span>Soy Sauce</span>
+            </label>
+            <label class="list-group-item" for="Spinach(Palak)">
+                <input type="checkbox" name="nonVegIngredients" value="Spinach(Palak)" id="Spinach(Palak)" />
+                <span>Spinach (Palak)</span>
+            </label>
+            <label class="list-group-item" for="Sprigs">
+                <input type="checkbox" name="nonVegIngredients" value="Sprigs" id="Sprigs" />
+                <span>Sprigs (Tahanee)</span>
+            </label>
+            <label class="list-group-item" for="Sprouts">
+                <input type="checkbox" name="nonVegIngredients" value="Sprouts" id="Sprouts" />
+                <span>Sprouts</span>
+            </label>
+            <label class="list-group-item" for="Sugar">
+                <input type="checkbox" name="nonVegIngredients" value="Sugar" id="Sugar" />
+                <span>Sugar</span>
+            </label>
+            <label class="list-group-item" for="Sunflower Oil">
+                <input type="checkbox" name="nonVegIngredients" value="Sunflower Oil" id="Sunflower Oil" />
+                <span>Sunflower Oil</span>
+            </label>
+
+            <!-- T -->
+            <h3 class="list-group-item-heading mt-3">T</h3>
+            <label class="list-group-item" for="Tamarind">
+                <input type="checkbox" name="nonVegIngredients" value="Tamarind" id="Tamarind" />
+                <span>Tamarind</span>
+            </label>
+            <label class="list-group-item" for="Til">
+                <input type="checkbox" name="nonVegIngredients" value="Til" id="Til" />
+                <span>Til</span>
+            </label>
+            <label class="list-group-item" for="Tomato">
+                <input type="checkbox" name="nonVegIngredients" value="Tomato" id="Tomato" />
+                <span>Tomato</span>
+            </label>
+            <label class="list-group-item" for="Turmeric(Haldi) Powder">
+                <input type="checkbox" name="nonVegIngredients" value="Turmeric(Haldi) Powder"
+                    id="Turmeric(Haldi) Powder" />
+                <span>Turmeric(Haldi) Powder</span>
+            </label>
+            <label class="list-group-item" for="Toor Dal">
+                <input type="checkbox" name="nonVegIngredients" value="Toor Dal" id="Toor Dal" />
+                <span>Toor Dal</span>
+            </label>
+
+            <!-- U -->
+            <h3 class="list-group-item-heading mt-3">U</h3>
+            <label class="list-group-item" for="Urad Dal">
+                <input type="checkbox" name="nonVegIngredients" value="Urad Dal" id="Urad Dal" />
+                <span>Urad Dal</span>
+            </label>
+
+            <!-- V -->
+            <h3 class="list-group-item-heading mt-3">V</h3>
+            <label class="list-group-item" for="Vinegar">
+                <input type="checkbox" name="nonVegIngredients" value="Vinegar" id="Vinegar" />
+                <span>Vinegar</span>
+            </label>
+
+            <!-- W -->
+            <h3 class="list-group-item-heading mt-3">W</h3>
+            <label class="list-group-item" for="Wheat">
+                <input type="checkbox" name="nonVegIngredients" value="Wheat" id="Wheat" />
+                <span>Wheat</span>
+            </label>
+
+            <!-- Y -->
+            <h3 class="list-group-item-heading mt-3">Y</h3>
+            <label class="list-group-item" for="Yogurt">
+                <input type="checkbox" name="nonVegIngredients" value="Yogurt" id="Yogurt" />
+                <span>Yogurt</span>
+            </label>
+
+            <input type="submit" value="Submit" id="newSubmitBtn" class="btn btn-outline-dark">
+        </div>
+    </form>
+
+
+    <!-- Footer -->
+    <footer>
+        SE11 PBL Group ID 5, Copyright &copy; 2021
+    </footer>
+
+{% endblock %}

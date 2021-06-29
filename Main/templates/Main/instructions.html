@@ -1,0 +1,47 @@
+{% extends 'Main/base.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- Header and Navbar -->
+
+    <header>
+        <div class="my-container">
+            <div id="branding">
+                <a href="{% url 'Main-home' %}"><h1>What's In Your Fridge...</h1></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'Main-home' %}">Home</a></li>
+                    <li class="current"><a href="{% url 'Main-instructions' %}">Instructions</a></li>
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                    <li><a href="{% url 'register' %}">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Steps to be Followed -->
+    <div class="container">
+        <div id="instruction-column" class="content mt-4">
+            <h2 class="text-center">How to Use this Website?</h2>
+            <ul class="mt-4">
+                <h5><strong>Below are the steps to be followed to use this website...</strong></h5>
+                <li>If you don't have an account, Register your account.</li>
+                <li>If you already have an account, Login using your username and password.</li>
+                <li>After logging in into the site, you will be directed to the Input Page. Here you have to select your meal preferences and submit the form.</li>
+                <li>According to your meal preferences (Veg/Non-Veg & Breakfast/Lunch/Dinner) you will be directed to the ingredients page.</li>
+                <li>On the ingredients page (Veg/Non-Veg), you will be provided with the list of various ingredients/vegetables.</li>
+                <li>Select all the ingredients/vegetables you currently have for better recipe recommendations.</li>
+                <li>After selecting the ingredients submit the form. You will be redirected to the results(final) page.</li>
+                <li>The Result page will contain the list of different recipes you can prepare based on the ingredients you filled up in the previous pages.</li>
+                <li>Also, don't forget to give your valuable feedback to us. The link for which will be provided on the respective pages.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="fixedFooter mt-4">
+        SE11 PBL Group ID 5, Copyright &copy; 2021
+    </footer>
+
+{% endblock %}

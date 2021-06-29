@@ -1,0 +1,51 @@
+{% extends 'Main/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+
+    <header>
+        <div class="my-container">
+            <div id="branding">
+                <a href="{% url 'Main-home' %}"><h1>What's In Your Fridge...</h1></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'register' %}">Register</a></li>
+                    <li class="current"><a href="{% url 'login' %}">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">{{message}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <div class="container mt-4 mb-4">
+            <form method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4">Log In</legend>
+                    {{form|crispy}}
+                </fieldset>
+                <div class="form-group mt-4">
+                    <button class="btn btn-outline-dark" type="submit">Login</button>
+                </div>
+            </form>
+            <div class="border-top pt-3">
+                <small class="text-muted">
+                    Don't have an Account? <a href="{% url 'register' %}" class="ml-2">Sign Up Now!</a>
+                </small>
+            </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="fixedFooter">
+        SE11 PBL Group ID 5, Copyright &copy; 2021
+    </footer>
+
+{% endblock %}

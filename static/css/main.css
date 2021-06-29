@@ -1,0 +1,223 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.my-container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
+header{
+    background: #171c1f; 
+    color: white;
+    padding: 30px 0px;
+    min-height: 70px;
+    border-bottom: #e84913 3px solid;
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header li{
+    float: left;
+    display: inline;
+    padding: 0 20px;
+}
+
+header #branding{
+    float: left;
+}
+
+header #branding h1{
+    margin: 0;
+}
+
+nav{
+    float: right;
+    margin: 10px 0 0 0;
+}
+
+#branding h1{
+    color: #cccccc;
+    font-style: italic ;
+    font-weight: bold;
+} 
+
+#branding a{
+    text-transform: capitalize;
+}
+
+header .current a{
+    color: #e84913;
+    font-weight: bold;
+}
+
+header a:hover{
+    color: #cccccc;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* Main content */
+div.content{
+    padding: 20px;
+    background-color: #dadada;
+    margin-bottom: 9px;
+    border-radius: 24px;
+}
+
+/* Footer */
+footer{
+    background-color: #171c1f;
+    color: #cccccc;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* media-queries */
+@media(max-width: 1200px){
+    header #branding, header nav, header nav li{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    header #branding{
+        margin-bottom: 20px;
+    }
+    header{
+        padding-bottom: 0px;
+    }
+    header nav li{
+        padding: 0 25px 0 0;
+    }
+}
+
+@media(max-width: 800px){
+    div.carousel-inner img{
+        height: 300px;
+        width: auto;
+    }
+}
+
+@media(max-width: 650px){
+    #branding h1{
+        font-size: 32px;
+    }
+    header nav ul{
+        text-align: left;
+        display: block;
+    }
+    header nav li{
+        display: block;
+        text-align: left;
+        padding: 10px 0;
+        border-bottom: 0.5px solid #cccccc;
+    }
+    div.carousel-inner img{
+        height: 250px;
+        width: auto;
+    }
+}
+
+/* Instructions Page */
+li{
+    font-size: 1.15em;
+    margin: 5px 0px;
+}
+
+#instruction-column{
+    margin-bottom: 70px;
+}
+
+@media(max-width: 650px){
+    #instruction-column{
+        margin-bottom: 10px;
+    }
+}
+
+/* Input Page */
+.formClass{
+    font-size: 1.15em;
+    width: 70%;
+    background-color: #dadada;
+    padding: 20px;
+    margin: 25px auto;
+    border-radius: 30px;
+    border: 0.5px solid #171c1f;
+}
+
+.innerForm{
+    margin: 0px 15%;
+}
+
+input[type="radio"]{
+    cursor: pointer;
+}
+
+#submitBtn{
+    background-color: #393c3f;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+select{
+    width: 120px;
+}
+
+#submitBtn:hover{
+    background-color: #000000;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.fixedFooter{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Media Queries */
+@media(max-width: 1200px){
+    .block{
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    #submitBtn, #submitBtn:hover{
+        padding: 5px 15px;
+    }
+}
+
+@media(max-width: 650px){
+    .fixedFooter{
+        position: static;
+    }
+}
+
+/* Veg and Nonveg Input */
+input[type="checkbox"]{
+    margin-right: 10px;
+}
+
+.list-group-item span{
+    font-size: 1.1em;
+}
+
+#newSubmitBtn{
+    margin: 16px 43%;
+}
