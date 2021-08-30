@@ -1,0 +1,56 @@
+{% extends 'Main/base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- Header and Navbar -->
+    <header>
+        <div class="my-container">
+            <div id="branding">
+                <a href="{% url 'Main-home' %}"><h1>What's In Your Fridge...</h1></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'input' %}">Input Page</a></li>
+                    <li class="current"><a href="#">Feedback</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">{{message}}</div>
+            {% endfor %}
+    {% endif %}
+
+    <div class="container formClass">
+        <form method="POST">
+            {% csrf_token %}
+            <h2 class="text-center">Feedback Form</h2>
+
+            <h5><label for="name">Name:</label></h5>
+            <input type="text" name="name" id="name" placeholder="Full Name" required>
+
+            <h5><label for="email">Email ID:</label></h5>
+            <input type="email" name="email" id="email" placeholder="Email Address" required>
+
+            <h5><label for="subject">Subject:</label></h5>
+            <input type="text" name="subject" id="subject" placeholder="Feedback Subject" required>
+
+            <h5><label for="message">Message:</label></h5>
+            <textarea id="message" name="message" rows="4" cols="50" placeholder="Message" required></textarea>
+
+            <div class="center">
+                <input id="submitBtn" type="submit" value="Send Feedback">
+            </div>
+          </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        Designed and Developed by: <a href="https://www.linkedin.com/in/shlok-shaha" target="_blank">Shlok Shaha</a> | <a href="https://www.linkedin.com/in/aagaaz-ali-sayed-1063851ba" target="_blank">Aagaaz Sayed</a>
+        <a href="#" style="float: right;">Back to top</a>
+    </footer>
+
+{% endblock %}

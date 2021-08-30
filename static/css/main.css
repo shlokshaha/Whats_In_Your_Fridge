@@ -84,6 +84,14 @@ footer{
     padding: 20px;
 }
 
+footer a{
+    color: #cccccc;
+    font-weight: 600;
+}
+
+footer a:hover{
+    color:white;
+}
 
 /* media-queries */
 @media(max-width: 1200px){
@@ -221,3 +229,54 @@ input[type="checkbox"]{
 #newSubmitBtn{
     margin: 16px 43%;
 }
+
+/* Feedback form */
+input[type="text"],input[type="email"], textarea{
+    width: 100%;
+    padding: 5px 8px;
+    margin-bottom: 12px;
+}
+
+.center{
+    margin: 0 40%;
+}
+
+@media(max-width: 1200px){
+    .center{
+        margin: 0 33%;
+    }
+}
+
+@media(max-width: 650px){
+    .center{
+        margin: 0 25%;
+    }
+}
+
+/* Results Pages */
+.cuisine{
+    float: right;
+    font-size: 0.7em;
+}
+
+.featurette p{
+    font-size: 17px;
+}
+
+div.box{
+    float: left;
+    width: 33.33%;
+    box-sizing: border-box;
+}
+
+@media(max-width: 992px){
+    img{
+        display: block;
+        width: 200px;
+        height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+    }
+}
+
