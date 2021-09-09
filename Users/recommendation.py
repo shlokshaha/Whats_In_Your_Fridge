@@ -1,6 +1,5 @@
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import CountVectorizer
-# import pandas as pd
 
 
 def get_rec(ip_rec, df, indices):
@@ -17,23 +16,23 @@ def get_rec(ip_rec, df, indices):
     # Index of our input recipe is always last index
     idx = len(indices)
 
-    # Extracting sim_scores for idx index movie
+    # Extracting sim_scores for idx index recipe
     sim_scores = list(enumerate(cosine_sim[idx]))
 
     # Sorted using lambda function where sim_scores is the x for lambda function
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
 
-    # Extracting the top 5 scored movies as our 5 recommendations
-    sim_scores = sim_scores[1:21]
+    # Extracting the top 10 scored recipe as our 5 recommendations
+    sim_scores = sim_scores[1:11]
 
     # print(sim_scores)
 
-    # Getting a list giving the index of our 5 movies
+    # Getting a list giving the index of our 5 recipes
     recipe_idx = [i[0] for i in sim_scores]
 
     # Removing the recipe from the dataset
     cl_rec = cl_rec.drop(cl_rec.tail(1).index, inplace=True)
 
-    # Returning the 5 titles of movies from our dataframe
+    # Returning the 5 titles of recipes from our dataframe
     # return df['RecipeName'].iloc[recipe_idx]
     return recipe_idx
