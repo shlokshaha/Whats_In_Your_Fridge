@@ -1,0 +1,1 @@
+web: gunicorn WhatsInYourFridge.wsgi --log-file -
