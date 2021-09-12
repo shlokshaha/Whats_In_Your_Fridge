@@ -199,6 +199,12 @@ select{
     bottom: 0;
 }
 
+.logoutFooter{
+    position: fixed;
+    width:100%;
+    bottom:0;
+}
+
 /* Media Queries */
 @media(max-width: 1200px){
     .block{
