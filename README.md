@@ -2,17 +2,13 @@
 A Django-based web application which recommends recipes to the user based on the ingredients the user has in his/her Fridge.
 
 
-## Project Link 
-http://whats-in-ur-fridge.herokuapp.com/
-
-
 ## Tech Stack Used
 
 **Frontend:** HTML, CSS, Bootstrap
 
 **Backend:** Django
 
-**Machine Learning:** Pandas, Scikit-learn (for recommendation)
+**Machine Learning:** Pandas, Scikit-learn, Cosine Similarity, SVD (for recommendation)
 
 
 
